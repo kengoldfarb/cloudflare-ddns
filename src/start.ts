@@ -1,9 +1,13 @@
-import { updateDns } from "./updateDns";
+import log from '@kengoldfarb/log'
+import { updateDns } from './updateDns'
 
-updateDns().then(() => {
-	console.log("DNS updated.");
-	process.exit(0);
-}).catch((err) => {
-	console.error(err);
-	process.exit(1);
-});
+updateDns()
+	.then(() => {
+		log.info('DNS updated.')
+		// process.kill(process.pid)
+		process.exit(0)
+	})
+	.catch(err => {
+		log.crit(err)
+		process.exit(1)
+	})
