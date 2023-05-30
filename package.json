@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "clean": "rm -rf build/*",
+    "build": "npm run clean ; tsc ; echo \"Finished Building\"",
+    "lint": "eslint 'src/**/*.ts' --ignore-pattern '**/*.test.ts' --ignore-pattern '**/tests/**/*.ts' --ignore-pattern '**/serverless/**/*.ts' && tsc -p tsconfig.lint.json --noEmit",
+    "lint:fix": "eslint --fix '**/*.ts' --ignore-pattern '**/*.test.ts' --ignore-pattern '**/tests/**/*.ts' --ignore-pattern '**/serverless/**/*.ts'",
+    "updateDns": "tsnd --inspect=4006 --respawn --transpile-only src/updateDns.ts"
+  },
+  "dependencies": {
+    "@kengoldfarb/log": "^1.0.5",
+    "cloudflare-dynamic-dns": "^1.0.2"
+  },
+  "devDependencies": {
+    "@kengoldfarb/semantic-release-config": "^1.0.3",
+    "eslint": "^8.41.0",
+    "eslint-config-kengoldfarb": "^1.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
