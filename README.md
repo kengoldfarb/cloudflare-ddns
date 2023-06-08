@@ -33,4 +33,3 @@ Edit the plist file to update the path to the `start.sh` script:
 Install the script
 
 ```launchctl load -w ~/Library/LaunchAgents/codes.ken.ddns.plist```
-

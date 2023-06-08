@@ -5,7 +5,8 @@
     "build": "npm run clean ; tsc ; echo \"Finished Building\"",
     "lint": "eslint 'src/**/*.ts' --ignore-pattern '**/*.test.ts' --ignore-pattern '**/tests/**/*.ts' --ignore-pattern '**/serverless/**/*.ts' && tsc -p tsconfig.lint.json --noEmit",
     "lint:fix": "eslint --fix '**/*.ts' --ignore-pattern '**/*.test.ts' --ignore-pattern '**/tests/**/*.ts' --ignore-pattern '**/serverless/**/*.ts'",
-    "updateDns": "tsnd --inspect=4006 --respawn --transpile-only src/start.ts"
+    "updateDns": "tsnd --inspect=4006 --respawn --transpile-only src/start.ts",
+    "release": "semantic-release"
   },
   "dependencies": {
     "@kengoldfarb/log": "^1.0.5",
