@@ -1,6 +1,6 @@
 # Cloudflare Dynamic DNS
 
-Use Cloudflare's API to dynamically update your DNS.
+Use Cloudflare's API to dynamically update your DNS records. Optionally install a MacOS service to automatically keep your DNS updated.
 
 ## Usage
 
@@ -8,7 +8,10 @@ Install packages
 
 ```yarn```
 
-Update the variables in `start.sh`
+Build
+```yarn build```
+
+Update the variables and paths in `start.sh`
 
 > You can get your API key here: https://dash.cloudflare.com/profile/api-tokens
 >
